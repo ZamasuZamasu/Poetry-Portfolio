@@ -56,9 +56,8 @@ h1 {
 
 /* header logo */
 #pic {
-    max-width: 100%;
     width: 100px;
-    height: auto;
+    height: 100px;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
@@ -224,7 +223,7 @@ footer img:hover {
 /* Adjustment for small screen devices */
 @media (max-width: 900px) {
     .poem-grid { grid-template-columns: repeat(2, 1fr); }
-    #pic { width: 220px; height: 220px; }
+    #pic { width: 100px; height: 100px; }
 }
 
 @media (max-width: 768px) {
