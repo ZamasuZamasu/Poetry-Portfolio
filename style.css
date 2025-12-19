@@ -223,14 +223,14 @@ footer img:hover {
 /* Adjustment for small screen devices */
 @media (max-width: 900px) {
     .poem-grid { grid-template-columns: repeat(2, 1fr); }
-    #pic { width: 80px; height: 80px; }
+    /* #pic { width: 80px; height: 80px; } */
 }
 
 @media (max-width: 768px) {
-    .Name { flex-direction: column; text-align: center; }
+    /* .Name { flex-direction: column; text-align: center; } */
     h1 { text-align: center; margin-bottom: 20px; }
     #pic { margin: 0 auto; }
-    #navigation { text-align: center; }
+    /* #navigation { text-align: center; } */
     .poem-grid { grid-template-columns: 1fr; }
     #DisplayPicture { float: none; margin: 0 auto 20px; display: block; width: 100%; max-width: 320px; }
 }
