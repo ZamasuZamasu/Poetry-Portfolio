@@ -58,7 +58,7 @@ h1 {
 #pic {
     max-width: 100%;
     width: 100px;
-    height: 100px;
+    height: auto;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
