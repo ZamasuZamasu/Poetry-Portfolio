@@ -228,8 +228,8 @@ footer img:hover {
 
 @media (max-width: 768px) {
     /* .Name { flex-direction: column; text-align: center; } */
-    h1 { text-align: center; margin-bottom: 20px; }
-    #pic { margin: 0 auto; }
+    /* h1 { text-align: center; margin-bottom: 20px; } */
+    /* #pic { margin: 0 auto; } */
     /* #navigation { text-align: center; } */
     .poem-grid { grid-template-columns: 1fr; }
     #DisplayPicture { float: none; margin: 0 auto 20px; display: block; width: 100%; max-width: 320px; }
