@@ -223,7 +223,7 @@ footer img:hover {
 /* Adjustment for small screen devices */
 @media (max-width: 900px) {
     .poem-grid { grid-template-columns: repeat(2, 1fr); }
-    #pic { width: 100px; height: 100px; }
+    #pic { width: 80px; height: 80px; }
 }
 
 @media (max-width: 768px) {
