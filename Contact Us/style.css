@@ -1,0 +1,207 @@
+/* Importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* designing body  */
+body {
+    background-color: #FAEBD7;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Designing header */
+header.top {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    padding: 60px 0 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Designing logos and h1 tag */
+.Name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5% 40px 5%; 
+    width: 100%;
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(2.0rem, 5vw, 3.5rem); 
+    font-weight: 500;
+    color: white;
+    margin: 0;  
+    line-height: 1.1;
+    text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    text-align: left;
+}
+/* logo */
+#pic {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Navigation Bar */
+#navigation {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    text-align: left;
+    padding: 18px 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+/* navigation links */
+#navigation a {
+    text-decoration: none;
+    color: #1a1a1a;
+    margin-right: 30px;
+    padding: 8px 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+/* logo */
+#navigation a:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Main portion of the page */
+main {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 5%;
+}
+
+/* Designing Footer */
+footer {
+    background-color: #0a0a0a;
+    padding: 80px 20px 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+footer img {
+    width: 24px;
+    margin: 0 15px;
+    filter: invert(100%) opacity(60%);
+    transition: 0.3s;
+}
+
+footer img:hover {
+    filter: invert(100%) opacity(100%);
+    transform: translateY(-5px);
+}
+
+#scrollToTopBtn {
+    background: none;
+    border: none;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    margin-top: 40px;
+    display: block;
+    width: 100%;
+}
+
+
+/* Container for the Contacts section */
+.Contacts {
+    padding: 60px 10%;
+    background-color: #fdf5e6;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.Contacts p {
+    background: #ffffff;
+    padding: 20px 40px;
+    margin: 10px 0;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    line-height: 1.8;
+    color: #2d3436;
+    transition: transform 0.3s ease;
+}
+
+
+.Contacts p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(106, 17, 203, 0.08);
+}
+
+/* Styling the links */
+.Contacts a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: 600;
+    word-break: break-all; 
+    transition: color 0.3s ease;
+}
+
+/* Hover effects */
+.Contacts a:hover {
+    color: #2575fc; 
+    text-decoration: underline;
+}
+
+/* Styling line breaks */
+.Contacts br {
+    display: block;
+    margin: 10px 0;
+    content: "";
+}
+
+/* Responsiveness for small screen devices */
+@media (max-width: 768px) {
+    .Contacts {
+        padding: 40px 5%;
+    }
+    
+    .Contacts p {
+        padding: 20px;
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,236 @@
+/* Using Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* Designing the Body */
+body {
+    background-color: #FAEBD7; 
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Designing the Header */
+header.top {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    padding: 60px 0 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation Bar Content Designing */
+.Name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5% 40px 5%;
+    width: 100%;
+}
+
+/* Designing H1 Tags */
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(2.0rem, 5vw, 3.5rem); 
+    font-weight: 500;
+    color: white;
+    margin: 0;  
+    line-height: 1.1;
+    text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+/* header logo */
+#pic {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+/* navigation bar, controls and animation */
+#navigation {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    text-align: left;
+    padding: 18px 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#navigation a {
+    text-decoration: none;
+    color: #1a1a1a;
+    margin-right: 30px;
+    padding: 8px 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* hovering and shadow effects */
+#navigation a:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* main portion of the page */
+main {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 5%;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+/* poem grid and poem cards */
+.poem-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.poem-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.4s ease;
+}
+
+.poem-card:hover {
+    transform: translateY(-10px);
+}
+
+/* about the poet section */
+.AboutAuthor {
+    margin-top: 100px;
+    padding: 40px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* adjusting display picture of the poet */
+#DisplayPicture {
+    float: right;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-left: 40px;
+    border-radius: 20px;
+    box-shadow: 100px 100px 50px rgba(0,0,0,0.1);
+}
+
+/* text designing */
+#info {
+    font-family: sans-serif;
+    white-space: pre-wrap;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* read the poem buttons */
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px; /* Rounded pill shape */
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(106, 17, 203, 0.2);
+    border: none;
+    cursor: pointer;
+    
+}
+
+/* hovering and shadow effects */
+.read-more:hover {
+    transform: translateY(-3px); /* Gentle lift effect */
+    box-shadow: 0 6px 20px rgba(106, 17, 203, 0.3);
+    filter: brightness(1.1);
+}
+
+/* designing the footer */
+footer {
+    background-color: #0a0a0a;
+    padding: 80px 20px 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+footer img {
+    width: 24px;
+    margin: 0 15px;
+    filter: invert(100%) opacity(60%);
+    transition: 0.3s;
+}
+
+footer img:hover {
+    filter: invert(100%) opacity(100%);
+    transform: translateY(-5px);
+}
+
+/* Move to Top feature */
+#scrollToTopBtn {
+    background: none;
+    border: none;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    margin-top: 40px;
+    display: block;
+    width: 100%;
+}
+
+/* Adjustment for small screen devices */
+@media (max-width: 900px) {
+    .poem-grid { grid-template-columns: repeat(2, 1fr); }
+    #pic { width: 220px; height: 220px; }
+}
+
+@media (max-width: 768px) {
+    .Name { flex-direction: column; text-align: center; }
+    h1 { text-align: center; margin-bottom: 20px; }
+    #pic { margin: 0 auto; }
+    #navigation { text-align: center; }
+    .poem-grid { grid-template-columns: 1fr; }
+    #DisplayPicture { float: none; margin: 0 auto 20px; display: block; width: 100%; max-width: 320px; }
+}

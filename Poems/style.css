@@ -1,0 +1,253 @@
+/* Importing Fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,800&display=swap');
+
+/* Adjusts the width as I change values instead of adding up to total width*/
+* {
+    box-sizing: border-box;
+}
+
+/* Design for Body */
+body {
+    background-color: #FAEBD7;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Design header, color textures credits are given in bibliography */
+header.top {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    padding: 60px 0 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* For animating the header coloration */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Designing the navigation bar */
+.Name {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 5% 40px 5%;
+    width: 100%;
+}
+/* For H1 tags */
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(2.0rem, 5vw, 3.5rem); 
+    font-weight: 500;
+    color: white;
+    margin: 0;  
+    line-height: 1.1;
+    text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+/* For logo in the header section */
+#pic {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Position, design and animation for the navigation bar  */
+#navigation {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    text-align: left;
+    padding: 18px 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+/* For navigation links */
+#navigation a {
+    text-decoration: none;
+    color: #1a1a1a;
+    margin-right: 30px;
+    padding: 8px 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+/* For enabling hovering and shadow effects */
+#navigation a:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* for main section of the page */
+main {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 5%;
+}
+
+/* Designing the footer color schemes have been credited in the bibliography */
+footer {
+    background-color: #0a0a0a;
+    padding: 80px 20px 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+/* adjusting and designing icons */
+footer img {
+    width: 24px;
+    margin: 0 15px;
+    filter: invert(100%) opacity(60%);
+    transition: 0.3s;
+}
+
+/* hovering effects on the footer */
+footer img:hover {
+    filter: invert(100%) opacity(100%);
+    transform: translateY(-5px);
+}
+
+/* Designing the Move to Top button */
+#scrollToTopBtn {
+    background: none;
+    border: none;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    margin-top: 40px;
+    display: block;
+    width: 100%;
+}
+
+/* Designing the poem section */
+.poem-view {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fffcf5;
+    padding: 60px 80px;
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+    border-left: 1px solid #e0d9c5; 
+}
+
+.poem-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+
+.stanza {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.stanza p {
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.25rem;
+    color: #444;
+    margin: 0;
+}
+
+/* Adjusting poem content to make it phone readable too */
+@media (max-width: 768px) {
+    .poem-view {
+        padding: 40px 30px;
+        margin: 20px 15px;
+        border-left: none;
+    }
+    
+    .poem-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* Designing for the poem list page */
+.PoemList {
+    padding: 50px 10%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+.list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+
+.poem-link-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.poem-link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    background: #fffcf5;
+    border-color: #6a11cb;
+}
+
+.poem-link-card a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+}
+
+.poem-link-card a:hover {
+    color: #6a11cb;
+}
+
+/* For the poem list page, ensuring proper design on small screen devices like phones */
+@media (max-width: 768px) {
+    .list-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .PoemList {
+        padding: 30px 5%;
+    }
+}
