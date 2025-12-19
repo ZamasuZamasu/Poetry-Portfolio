@@ -56,6 +56,7 @@ h1 {
 
 /* header logo */
 #pic {
+    max-width: 100%;
     width: 100px;
     height: 100px;
     object-fit: cover;
